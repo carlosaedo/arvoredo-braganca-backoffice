@@ -10,13 +10,13 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "lrb-app.grupoerre.pt",
-        port: "3010",
+        port: "443",
         pathname: "/uploads/trees/**",
       },
       {
         protocol: "https",
         hostname: "lrb-app.grupoerre.pt",
-        port: "3010",
+        port: "443",
         pathname: "/uploads/misc/**",
       },
     ],
