@@ -6,7 +6,7 @@ import { dataGeneralSidebar, dataSupportSidebar } from "./SidebarRoutes.data";
 
 export function SidebarRoutes() {
   const handleButtonClick = () => {
-    window.location.href = "https://arvoredo-dashboard-braganca.vercel.app/";
+    window.location.href = "https://arvoredo-braganca.vercel.app/";
   };
 
   return (
