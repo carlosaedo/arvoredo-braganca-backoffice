@@ -1,7 +1,6 @@
 import { toast } from "react-toastify";
 
 const BASE_URL = "https://lrb-app.grupoerre.pt";
-
 export const editOccurrence = async (
   occurrence: any,
   status: any,
