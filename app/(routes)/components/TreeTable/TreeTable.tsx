@@ -73,7 +73,7 @@ export const PhotoDialogIndividual = ({ photo }: { photo: string }) => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => setSelectedPhoto(`${photo}`)}
+            onClick={() => setSelectedPhoto(`${process.env.BASE_URL}/${photo}`)}
           >
             <ImageIcon className="mr-1 h-4 w-4" />
             Foto
