@@ -10,13 +10,11 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "lrb-app.grupoerre.pt",
-        port: "443",
         pathname: "/uploads/trees/**",
       },
       {
         protocol: "https",
         hostname: "lrb-app.grupoerre.pt",
-        port: "443",
         pathname: "/uploads/misc/**",
       },
     ],
@@ -24,7 +22,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // matching all API routes
+   
         source: "/api/:path*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
