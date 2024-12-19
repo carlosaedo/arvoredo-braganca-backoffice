@@ -5,7 +5,7 @@ export const editOccurrence = async (
   occurrence: any,
   status: any,
   occurrenceId: string,
-  setAllOccurrences: any,
+  setAllOccurrences: any
 ) => {
   const token = localStorage.getItem("token");
 
@@ -24,7 +24,7 @@ export const editOccurrence = async (
         imgUrl: occurrence.imgUrl,
         status: status,
       }),
-    },
+    }
   );
 
   const responseData = await response.json();

@@ -31,6 +31,7 @@ import { useAuths } from "@/app/context/AuthContext";
 export const PhotoDialog = ({ photos }: { photos: string[] }) => {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
+  console.log("Selected foto", photos);
   return (
     <div className="flex flex-wrap gap-2">
       {photos.map((photo, index) => (

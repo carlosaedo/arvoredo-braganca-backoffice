@@ -28,7 +28,7 @@ export interface Tree {
   novelos_fibra: string;
   Forma_caldeira: string;
   Altura_v2: number;
-  capv2: string;
+  capv2: number;
   DAP_v2: number;
   idade_apro_v2: string;
   Especie_Val: number;

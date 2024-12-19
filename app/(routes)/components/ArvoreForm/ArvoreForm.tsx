@@ -222,7 +222,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                             | Promise<AwaitedReactNode>
                             | null
                             | undefined,
-                          index: any,
+                          index: any
                         ) => (
                           <SelectItem
                             key={`${item}-${index}`}
@@ -230,7 +230,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           >
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -298,7 +298,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                             | Promise<AwaitedReactNode>
                             | null
                             | undefined,
-                          index: any,
+                          index: any
                         ) => (
                           <SelectItem
                             key={`${item}-${index}`}
@@ -306,7 +306,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           >
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -346,7 +346,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                             | Promise<AwaitedReactNode>
                             | null
                             | undefined,
-                          index: any,
+                          index: any
                         ) => (
                           <SelectItem
                             key={`${item}-${index}`}
@@ -354,7 +354,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           >
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -442,7 +442,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -472,7 +472,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -502,7 +502,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -532,7 +532,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -561,7 +561,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -591,7 +591,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -621,7 +621,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -650,7 +650,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -680,7 +680,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -710,7 +710,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -852,7 +852,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -882,7 +882,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>
@@ -899,9 +899,9 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                   <FormLabel>Altura</FormLabel>
                   <FormControl>
                     <Input
+                      {...field}
                       placeholder="Introduza..."
                       type="number"
-                      {...field}
                     />
                   </FormControl>
                   <FormMessage />
@@ -916,9 +916,9 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                   <FormLabel>DAP</FormLabel>
                   <FormControl>
                     <Input
+                      {...field}
                       placeholder="Introduza..."
                       type="number"
-                      {...field}
                     />
                   </FormControl>
                   <FormMessage />
@@ -933,7 +933,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                   <FormLabel>CAP</FormLabel>
                   <p className="text-[13px]">
                     {Number(watchDap)
-                      ? (Number(watchDap) * 3.14).toFixed(2)
+                      ? Number((Number(watchDap) * 3.14).toFixed(2))
                       : "Introduza um valor no DAP"}
                   </p>
                   <FormMessage />
@@ -961,7 +961,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                           <SelectItem key={`${item}-${index}`} value={item}>
                             {item}
                           </SelectItem>
-                        ),
+                        )
                       )}
                     </SelectContent>
                   </Select>

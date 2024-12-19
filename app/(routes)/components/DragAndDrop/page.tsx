@@ -30,11 +30,11 @@ export default function DragAndDrop({ files, setFiles }: any) {
 
     try {
       const response = await fetch(
-        `${BASE_URL}/files/upload?destinationFolder=trees`,
+        `${process.env.BASE_URL}/files/upload?destinationFolder=trees`,
         {
           method: "POST",
           body: formData,
-        },
+        }
       );
 
       if (!response.ok) {
@@ -106,7 +106,7 @@ export default function DragAndDrop({ files, setFiles }: any) {
                 <button
                   onClick={() =>
                     setFilesToShow((prevFiles: any[]) =>
-                      prevFiles.filter((_: any, i: any) => i !== index),
+                      prevFiles.filter((_: any, i: any) => i !== index)
                     )
                   }
                   className="absolute top-0 right-0 rounded-full bg-red-600 p-2 py-1 text-white"
@@ -114,7 +114,7 @@ export default function DragAndDrop({ files, setFiles }: any) {
                   x
                 </button>
               </div>
-            ),
+            )
           )}
         </div>
       )}

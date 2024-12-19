@@ -73,7 +73,7 @@ export const PhotoDialogIndividual = ({ photo }: { photo: string }) => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => setSelectedPhoto(`${photo}`)}
+            onClick={() => setSelectedPhoto(`${process.env.BASE_URL}/${photo}`)}
           >
             <ImageIcon className="mr-1 h-4 w-4" />
             Foto
@@ -159,7 +159,7 @@ export function TreeTable({
       cell: ({ row }) => {
         const photo = row.getValue("imgUrl");
         const photoPath = photo?.split("/")[5];
-        console.log("photoPath", photoPath);
+        //console.log("photoPath", photoPath);
 
         if (photoPath) {
           return <PhotoDialogIndividual photo={photo} />;
@@ -274,7 +274,7 @@ export function TreeTable({
                       fullObject,
                       "canceled",
                       fullObject._id,
-                      setAllOccurrences,
+                      setAllOccurrences
                     );
                   }}
                 >
@@ -288,7 +288,7 @@ export function TreeTable({
                       fullObject,
                       "approved",
                       fullObject._id,
-                      setAllOccurrences,
+                      setAllOccurrences
                     )
                   }
                 >
@@ -304,7 +304,7 @@ export function TreeTable({
 
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    [],
+    []
   );
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
@@ -389,7 +389,7 @@ export function TreeTable({
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext(),
+                            header.getContext()
                           )}
                     </TableHead>
                   );
@@ -408,7 +408,7 @@ export function TreeTable({
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext(),
+                        cell.getContext()
                       )}
                     </TableCell>
                   ))}

@@ -29,9 +29,13 @@ export const formSchema = z.object({
   exsudacao: z.string(),
   novelos_fibra: z.string(),
   Forma_caldeira: z.string(),
-  Altura_v2: z.number(),
+  Altura_v2: z.string().refine((val) => !Number.isNaN(parseInt(val, 10)), {
+    message: "Expected number, received a string",
+  }),
   capv2: z.number(),
-  DAP_v2: z.number(),
+  DAP_v2: z.string().refine((val) => !Number.isNaN(parseInt(val, 10)), {
+    message: "Expected number, received a string",
+  }),
   idade_apro_v2: z.string(),
   Especie_Val: z.string().optional(),
   Outro_Nome_Comum: z.string().optional(),
