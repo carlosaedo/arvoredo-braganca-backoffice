@@ -10,7 +10,7 @@ export default function DragAndDrop({ files, setFiles }: any) {
   //useEffect(() => console.log("FIlestoshow", filesToShow), [filesToShow]);
 
   const handleFiles = async (newFiles: FileList | File[]) => {
-    const existingFileCount = files.length;
+    const existingFileCount = files?.length;
     const remainingSlots = 2 - existingFileCount;
 
     if (remainingSlots > 0) {
@@ -93,7 +93,7 @@ export default function DragAndDrop({ files, setFiles }: any) {
         />
       </div>
 
-      {filesToShow.length > 0 && (
+      {filesToShow?.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-4">
           {filesToShow.map(
             (file: Blob | MediaSource, index: Key | null | undefined) => (
@@ -120,7 +120,7 @@ export default function DragAndDrop({ files, setFiles }: any) {
       )}
 
       <div className="mt-4 flex space-x-2">
-        {files && files.length < 2 && (
+        {files && files?.length < 2 && (
           <button
             onClick={() => fileInputRef.current?.click()}
             className="rounded bg-blue-600 px-4 py-2 uppercase tracking-widest text-white outline-none"
