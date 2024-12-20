@@ -7,7 +7,7 @@ export default function DragAndDrop({ files, setFiles }: any) {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [filesToShow, setFilesToShow] = useState<File[] | string[]>([]);
 
-  useEffect(() => console.log("FIlestoshow", filesToShow), [filesToShow]);
+  //useEffect(() => console.log("FIlestoshow", filesToShow), [filesToShow]);
 
   const handleFiles = async (newFiles: FileList | File[]) => {
     const existingFileCount = files.length;
@@ -138,3 +138,4 @@ export default function DragAndDrop({ files, setFiles }: any) {
     </div>
   );
 }
+
