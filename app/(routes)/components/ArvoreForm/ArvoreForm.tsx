@@ -1019,7 +1019,7 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
                 <FormItem>
                   <FormLabel>Fotos</FormLabel>
                   <FormControl>
-                    <DragAndDrop />
+                    <DragAndDrop files={files} setFiles={setFiles} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
