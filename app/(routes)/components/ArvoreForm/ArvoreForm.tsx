@@ -66,6 +66,8 @@ export function ArvoreForm({ arvore, type }: ArvoreFormTypes) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentDate, setCurrentDate] = useState("");
+  const [files, setFiles] = useState<File[] | string[]>([""]);
+
 
   const { setLatLong, latLong, setCoordinates, coordinates } = useAuths();
 
