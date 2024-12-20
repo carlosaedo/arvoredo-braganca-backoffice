@@ -32,7 +32,7 @@ export const formSchema = z.object({
   Altura_v2: z.string().refine((val) => !Number.isNaN(parseInt(val, 10)), {
     message: "Expected number, received a string",
   }),
-  capv2: z.number(),
+  capv2: z.number().optional(),
   DAP_v2: z.string().refine((val) => !Number.isNaN(parseInt(val, 10)), {
     message: "Expected number, received a string",
   }),
